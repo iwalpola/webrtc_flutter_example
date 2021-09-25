@@ -68,7 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
               controller: controller,
               maxLines: 10,
             ),
-            FlatButton(
+            TextButton(
               onPressed: () {
                 Navigator.pop(context);
               },
@@ -105,7 +105,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Row(
               children: [
                 Expanded(
-                  child: RaisedButton(
+                  child: ElevatedButton(
                     child: Text("OFFER"),
                     onPressed: () {
                       viewModel.offerConnection();
@@ -113,7 +113,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
                 Expanded(
-                  child: RaisedButton(
+                  child: ElevatedButton(
                     child: Text("ANSWER"),
                     onPressed: () async {
                       final offer = await getSdpFromUser(context);
@@ -123,7 +123,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
                 Expanded(
-                  child: RaisedButton(
+                  child: ElevatedButton(
                       child: Text("SET REMOTE"),
                       onPressed: () async {
                         final answer = await getSdpFromUser(context);
